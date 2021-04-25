@@ -1,0 +1,28 @@
+{
+    "name": "ArduinoNet",
+    "version": "0.1.1",
+    "description": "Radio support to Arduino projects",
+    "keywords": "radio, lora, rf24",
+    "repository":
+    {
+        "type": "git",
+        "url": "git@github.com:ustisha/ArduinoNet.git"
+    },
+    "authors":
+    [
+        {
+            "name": "Dmitriy Deryabin",
+            "email": "dmitriy@ustisha.ru"
+        }
+    ],
+    "license": "MIT",
+    "frameworks": "arduino",
+    "platforms": "atmelavr",
+    "dependencies":
+    {
+        "SPI": "^1.0",
+        "sandeepmistry/LoRa": "^0.8",
+        "tmrh20/RF24": "^1.3",
+        "nrf24/RF24Network": "^1.0"
+    }
+}
