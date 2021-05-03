@@ -102,9 +102,22 @@ const uint8_t PORT_LIGHT_CTRL_02 = 12;
 const uint8_t PORT_LIGHT_CTRL_03 = 13;
 const uint8_t PORT_LIGHT_CTRL_04 = 14;
 const uint8_t PORT_RTC_CLOCK = 15;
+const uint8_t PORT_MOTION_1 = 16;
+const uint8_t PORT_MOTION_2 = 17;
+const uint8_t PORT_MOTION_3 = 18;
+const uint8_t PORT_MOTION_4 = 19;
+const uint8_t PORT_MOTION_5 = 20;
 const uint8_t PORT_18B20_2 = 21;
 const uint8_t PORT_18B20_3 = 22;
 const uint8_t PORT_18B20_4 = 23;
+const uint8_t PORT_VALUE_2 = 61;
+const uint8_t PORT_VALUE_3 = 62;
+const uint8_t PORT_VALUE_4 = 63;
+const uint8_t PORT_VALUE_5 = 64;
+const uint8_t PORT_VALUE_6 = 65;
+const uint8_t PORT_VALUE_7 = 66;
+const uint8_t PORT_VALUE_8 = 67;
+const uint8_t PORT_VALUE_9 = 68;
 const uint8_t PORT_TEMP_CTRL_2 = 71;
 const uint8_t PORT_TEMP_CTRL_3 = 72;
 const uint8_t PORT_TEMP_CTRL_4 = 73;
@@ -119,6 +132,28 @@ const uint8_t CMD_VALUE = 6;
 const uint8_t CMD_GET_VALUES = 7;
 const uint8_t CMD_MODE = 8;
 const uint8_t CMD_TIMEOUT = 9;
+// Temp controller commands
+const uint8_t CMD_UP_LIMIT = 10;
+const uint8_t CMD_DOWN_LIMIT = 11;
+// RTC set time
+const uint8_t CMD_RTC_DATE = 12;
+const uint8_t CMD_RTC_TIME = 13;
+// Free commands
+// 14
+const uint8_t CMD_MOISTURE = 15;
+const uint8_t CMD_MOTION = 16;
+// Free commands
+// 17
+// 18
+// 19
+// Light controller commands
+const uint8_t CMD_ACTIVITY_RATIO = 20;
+const uint8_t CMD_ACTIVITY_LIMIT = 21;
+const uint8_t CMD_RECALL_RATIO = 22;
+const uint8_t CMD_RECALL_TIMEOUT = 23;
+const uint8_t CMD_TIME_LEFT = 24;
+const uint8_t CMD_CALL = 25;
+const uint8_t CMD_ENERGY_LEVEL = 30;
 const uint8_t CMD_RELAY_00 = 40;
 // Reserved for autocalculate relay number
 const uint8_t CMD_RELAY_01 = 41;
@@ -141,23 +176,6 @@ const uint8_t CMD_SERVO_06 = 56;
 const uint8_t CMD_SERVO_07 = 57;
 const uint8_t CMD_SERVO_08 = 58;
 const uint8_t CMD_SERVO_09 = 59;
-// Temp controller commands
-const uint8_t CMD_UP_LIMIT = 10;
-const uint8_t CMD_DOWN_LIMIT = 11;
-// RTC set time
-const uint8_t CMD_RTC_DATE = 12;
-const uint8_t CMD_RTC_TIME = 13;
-// Free commands
-// 18
-// 19
-// Light controller commands
-const uint8_t CMD_ACTIVITY_RATIO = 20;
-const uint8_t CMD_ACTIVITY_LIMIT = 21;
-const uint8_t CMD_RECALL_RATIO = 22;
-const uint8_t CMD_RECALL_TIMEOUT = 23;
-const uint8_t CMD_TIME_LEFT = 24;
-const uint8_t CMD_CALL = 25;
-const uint8_t CMD_ENERGY_LEVEL = 30;
 // Info
 const uint8_t CMD_INFO = 100;
 
