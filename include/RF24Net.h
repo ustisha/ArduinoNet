@@ -3,8 +3,6 @@
 
 //#define SERIAL_DEBUG
 
-#define DISABLE_FRAGMENTATION
-
 #include <Arduino.h>
 #include <DebugLog.h>
 #include <RadioInterface.h>

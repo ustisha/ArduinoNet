@@ -9,14 +9,17 @@ RF24Net::RF24Net(SmartNet *net, uint16_t node, RF24 &radio) : RadioInterface(net
     radio.setPALevel(RF24_PA_MAX);
     radio.setDataRate(RF24_250KBPS);
     radio.setCRCLength(RF24_CRC_8);
+    network->begin(RF24_CHANNEL, node);
 
 #ifdef SERIAL_DEBUG
     printf_P(PSTR("[RF24Net] Initialize status: %d, Carrier (-64dBm): %d\n"), status, (int) radio.testCarrier());
     printf_P(PSTR("[RF24Net] MAIN_BUFFER_SIZE: %d\n"), (int) MAIN_BUFFER_SIZE);
-    radio.printDetails();
+#ifdef DISABLE_FRAGMENTATION
+    printf_P(PSTR("[RF24Net] DISABLE_FRAGMENTATION: true\n"));
 #endif
 
-    network->begin(RF24_CHANNEL, node);
+    radio.printPrettyDetails();
+#endif
 }
 
 void RF24Net::sendData(Packet *p) {

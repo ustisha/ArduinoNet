@@ -1,10 +1,10 @@
 #include "../include/NetComponent.h"
 
-NetComponent::NetComponent(SmartNet *n, uint8_t sp, uint8_t max) : rcvr(new R[max]{}),
-                                                                   sport(sp),
+NetComponent::NetComponent(SmartNet *n, uint8_t sp, uint8_t max) : sport(sp),
+                                                                   i(0),
                                                                    maxCmp(max),
                                                                    sleepTime(0),
-                                                                   i(0) {
+                                                                   rcvr(new R[max]{}) {
     sender = n->sender;
     n->addNetComponent(this);
 }
