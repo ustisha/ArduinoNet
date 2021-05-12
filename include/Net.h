@@ -154,28 +154,45 @@ const uint8_t CMD_RECALL_TIMEOUT = 23;
 const uint8_t CMD_TIME_LEFT = 24;
 const uint8_t CMD_CALL = 25;
 const uint8_t CMD_ENERGY_LEVEL = 30;
+// Relays
 const uint8_t CMD_RELAY_00 = 40;
-// Reserved for autocalculate relay number
 const uint8_t CMD_RELAY_01 = 41;
 const uint8_t CMD_RELAY_02 = 42;
 const uint8_t CMD_RELAY_03 = 43;
 const uint8_t CMD_RELAY_04 = 44;
-const uint8_t CMD_RELAY_05 = 45;
-const uint8_t CMD_RELAY_06 = 46;
-const uint8_t CMD_RELAY_07 = 47;
-const uint8_t CMD_RELAY_08 = 48;
-const uint8_t CMD_RELAY_09 = 49;
-// Reserved for autocalculate servo number
+// Relay settings
+const uint8_t CMD_RELAY_ON_00 = 45;
+const uint8_t CMD_RELAY_ON_01 = 46;
+const uint8_t CMD_RELAY_ON_02 = 47;
+const uint8_t CMD_RELAY_ON_03 = 48;
+const uint8_t CMD_RELAY_ON_04 = 49;
+const uint8_t CMD_RELAY_OFF_00 = 145;
+const uint8_t CMD_RELAY_OFF_01 = 146;
+const uint8_t CMD_RELAY_OFF_02 = 147;
+const uint8_t CMD_RELAY_OFF_03 = 148;
+const uint8_t CMD_RELAY_OFF_04 = 149;
+// Servos
 const uint8_t CMD_SERVO_00 = 50;
 const uint8_t CMD_SERVO_01 = 51;
 const uint8_t CMD_SERVO_02 = 52;
 const uint8_t CMD_SERVO_03 = 53;
 const uint8_t CMD_SERVO_04 = 54;
-const uint8_t CMD_SERVO_05 = 55;
-const uint8_t CMD_SERVO_06 = 56;
-const uint8_t CMD_SERVO_07 = 57;
-const uint8_t CMD_SERVO_08 = 58;
-const uint8_t CMD_SERVO_09 = 59;
+// Servo settings
+const uint8_t CMD_SERVO_MIN_ANGLE_00 = 55;
+const uint8_t CMD_SERVO_MIN_ANGLE_01 = 56;
+const uint8_t CMD_SERVO_MIN_ANGLE_02 = 57;
+const uint8_t CMD_SERVO_MIN_ANGLE_03 = 58;
+const uint8_t CMD_SERVO_MIN_ANGLE_04 = 59;
+const uint8_t CMD_SERVO_MAX_ANGLE_00 = 155;
+const uint8_t CMD_SERVO_MAX_ANGLE_01 = 156;
+const uint8_t CMD_SERVO_MAX_ANGLE_02 = 157;
+const uint8_t CMD_SERVO_MAX_ANGLE_03 = 158;
+const uint8_t CMD_SERVO_MAX_ANGLE_04 = 159;
+const uint8_t CMD_SERVO_RATIO_00 = 160;
+const uint8_t CMD_SERVO_RATIO_01 = 161;
+const uint8_t CMD_SERVO_RATIO_02 = 162;
+const uint8_t CMD_SERVO_RATIO_03 = 163;
+const uint8_t CMD_SERVO_RATIO_04 = 164;
 // Info
 const uint8_t CMD_INFO = 100;
 
@@ -184,8 +201,7 @@ const uint8_t RELAY_DISABLED = 0;
 const uint8_t RELAY_ON = 1;
 const uint8_t RELAY_OFF = 2;
 
-const uint8_t SERVO_DISABLED = 0;
-const uint8_t SERVO_ANGLE = 1;
+const uint8_t SERVO_DISABLED = -1;
 
 const uint8_t MODE_AUTO = 1;
 const uint8_t MODE_MANUAL = 2;
