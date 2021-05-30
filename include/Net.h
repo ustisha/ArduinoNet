@@ -197,7 +197,7 @@ const uint8_t CMD_SERVO_RATIO_04 = 164;
 const uint8_t CMD_INFO = 100;
 
 // Data values.
-const uint8_t RELAY_DISABLED = 0;
+const uint8_t RELAY_DISABLED = -1;
 const uint8_t RELAY_ON = 1;
 const uint8_t RELAY_OFF = 2;
 
