@@ -3,6 +3,8 @@
 
 //#define SERIAL_DEBUG
 
+#define MAX_PAYLOAD_SIZE 72
+
 #include <Arduino.h>
 #include <DebugLog.h>
 #include <RadioInterface.h>
