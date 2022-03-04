@@ -31,6 +31,9 @@ public:
     void addNetComponent(NetComponent *nc);
 
     void commandReceived(Packet *p);
+#ifdef SERIAL_DEBUG
+    void tick();
+#endif
 
 protected:
     NetComponents *components;

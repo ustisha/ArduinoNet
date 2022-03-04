@@ -1,6 +1,6 @@
 {
     "name": "ArduinoNet",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "Radio support to Arduino projects",
     "keywords": "radio, lora, rf24",
     "repository":
@@ -17,7 +17,7 @@
     ],
     "license": "MIT",
     "frameworks": "arduino",
-    "platforms": ["atmelavr", "espressif8266"],
+    "platforms": ["atmelavr", "atmelmegaavr", "espressif8266"],
     "dependencies":
     {
         "SPI": "^1.0",

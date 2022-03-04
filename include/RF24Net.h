@@ -11,8 +11,8 @@
 #include <SmartNet.h>
 #include <Format.h>
 
-#define RF24_DEFAULT_CE 8
-#define RF24_DEFAULT_CSN 9
+#define RF24_DEFAULT_CE 7
+#define RF24_DEFAULT_CSN 8
 #define RF24_CHANNEL 46
 
 class RF24Net : public RadioInterface {

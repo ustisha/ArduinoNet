@@ -110,6 +110,11 @@ const uint8_t PORT_MOTION_5 = 20;
 const uint8_t PORT_18B20_2 = 21;
 const uint8_t PORT_18B20_3 = 22;
 const uint8_t PORT_18B20_4 = 23;
+const uint8_t PORT_WASHING_MACHINE = 24;
+const uint8_t PORT_TVIRTUAL_1 = 25;
+const uint8_t PORT_TVIRTUAL_2 = 26;
+const uint8_t PORT_TVIRTUAL_3 = 27;
+const uint8_t PORT_TVIRTUAL_4 = 28;
 const uint8_t PORT_VALUE_2 = 61;
 const uint8_t PORT_VALUE_3 = 62;
 const uint8_t PORT_VALUE_4 = 63;
@@ -142,10 +147,10 @@ const uint8_t CMD_RTC_TIME = 13;
 // 14
 const uint8_t CMD_MOISTURE = 15;
 const uint8_t CMD_MOTION = 16;
-// Free commands
-// 17
-// 18
-// 19
+// Washing Machine
+const uint8_t CMD_WASHING_STATE = 17;
+const uint8_t CMD_WASHING_REMAINING_SEC = 18;
+const uint8_t CMD_WASHING_DOOR_OPENED = 19;
 // Light controller commands
 const uint8_t CMD_ACTIVITY_RATIO = 20;
 const uint8_t CMD_ACTIVITY_LIMIT = 21;
