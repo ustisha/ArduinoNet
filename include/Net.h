@@ -116,6 +116,11 @@ const uint8_t PORT_TVIRTUAL_1 = 25;
 const uint8_t PORT_TVIRTUAL_2 = 26;
 const uint8_t PORT_TVIRTUAL_3 = 27;
 const uint8_t PORT_TVIRTUAL_4 = 28;
+const uint8_t PORT_SERVO_00 = 30;
+const uint8_t PORT_SERVO_01 = 31;
+const uint8_t PORT_SERVO_02 = 32;
+const uint8_t PORT_SERVO_03 = 33;
+const uint8_t PORT_SERVO_04 = 34;
 const uint8_t PORT_VALUE_2 = 61;
 const uint8_t PORT_VALUE_3 = 62;
 const uint8_t PORT_VALUE_4 = 63;
@@ -159,7 +164,13 @@ const uint8_t CMD_RECALL_RATIO = 22;
 const uint8_t CMD_RECALL_TIMEOUT = 23;
 const uint8_t CMD_TIME_LEFT = 24;
 const uint8_t CMD_CALL = 25;
-const uint8_t CMD_ENERGY_LEVEL = 30;
+const uint8_t CMD_ENERGY_LEVEL = 26;
+// 27, 28, 29
+const uint8_t CMD_SERVO_ANGLE = 30;
+const uint8_t CMD_SERVO_MIN_ANGLE = 31;
+const uint8_t CMD_SERVO_MAX_ANGLE = 32;
+const uint8_t CMD_SERVO_SPEED = 33;
+const uint8_t CMD_SERVO_MOVE_TYPE = 34;
 // Relays
 const uint8_t CMD_RELAY_00 = 40;
 const uint8_t CMD_RELAY_01 = 41;
@@ -222,5 +233,10 @@ const uint8_t INFO_SETUP_COMPLETED = 9;
 const uint8_t INFO_ERROR_DS18B20 = 20;
 const uint8_t INFO_ERROR_BME280 = 21;
 const uint8_t INFO_ERROR_BH1750 = 22;
+const uint8_t INFO_ERROR_SERVO_00 = 50;
+const uint8_t INFO_ERROR_SERVO_01 = 51;
+const uint8_t INFO_ERROR_SERVO_02 = 52;
+const uint8_t INFO_ERROR_SERVO_03 = 53;
+const uint8_t INFO_ERROR_SERVO_04 = 54;
 
 #endif //NET_H
