@@ -167,10 +167,11 @@ const uint8_t CMD_CALL = 25;
 const uint8_t CMD_ENERGY_LEVEL = 26;
 // 27, 28, 29
 const uint8_t CMD_SERVO_ANGLE = 30;
-const uint8_t CMD_SERVO_MIN_ANGLE = 31;
-const uint8_t CMD_SERVO_MAX_ANGLE = 32;
-const uint8_t CMD_SERVO_SPEED = 33;
-const uint8_t CMD_SERVO_MOVE_TYPE = 34;
+const uint8_t CMD_SERVO_PERCENT = 31;
+const uint8_t CMD_SERVO_MIN_ANGLE = 32;
+const uint8_t CMD_SERVO_MAX_ANGLE = 33;
+const uint8_t CMD_SERVO_SPEED = 34;
+const uint8_t CMD_SERVO_MOVE_TYPE = 35;
 // Relays
 const uint8_t CMD_RELAY_00 = 40;
 const uint8_t CMD_RELAY_01 = 41;
