@@ -25,7 +25,7 @@ protected:
 
 public:
 
-    RF24Net(SmartNet *net, uint16_t node, RF24 &radio);
+    RF24Net(SmartNet *net, uint16_t node, RF24 &radio, uint8_t level = RF24_PA_LOW);
 
     void sendData(Packet *p) override;
 

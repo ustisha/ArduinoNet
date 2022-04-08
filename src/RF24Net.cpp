@@ -1,12 +1,11 @@
 #include "../include/RF24Net.h"
 
-RF24Net::RF24Net(SmartNet *net, uint16_t node, RF24 &radio) : RadioInterface(net), radio(radio) {
+RF24Net::RF24Net(SmartNet *net, uint16_t node, RF24 &radio, uint8_t level) : RadioInterface(net), radio(radio) {
 
     network = new RF24Network(radio);
 
     bool status = radio.begin();
-    radio.setAutoAck(false);
-    radio.setPALevel(RF24_PA_MAX);
+    radio.setPALevel(level);
     radio.setDataRate(RF24_250KBPS);
     radio.setCRCLength(RF24_CRC_8);
     network->begin(RF24_CHANNEL, node);
