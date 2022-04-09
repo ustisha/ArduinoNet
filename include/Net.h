@@ -121,6 +121,16 @@ const uint8_t PORT_SERVO_01 = 31;
 const uint8_t PORT_SERVO_02 = 32;
 const uint8_t PORT_SERVO_03 = 33;
 const uint8_t PORT_SERVO_04 = 34;
+const uint8_t PORT_RELAY_00 = 35;
+const uint8_t PORT_RELAY_01 = 36;
+const uint8_t PORT_RELAY_02 = 37;
+const uint8_t PORT_RELAY_03 = 38;
+const uint8_t PORT_RELAY_04 = 39;
+const uint8_t PORT_RELAY_05 = 40;
+const uint8_t PORT_RELAY_06 = 41;
+const uint8_t PORT_RELAY_07 = 42;
+const uint8_t PORT_RELAY_08 = 43;
+const uint8_t PORT_RELAY_09 = 44;
 const uint8_t PORT_VALUE_2 = 61;
 const uint8_t PORT_VALUE_3 = 62;
 const uint8_t PORT_VALUE_4 = 63;
@@ -150,7 +160,7 @@ const uint8_t CMD_DOWN_LIMIT = 11;
 const uint8_t CMD_RTC_DATE = 12;
 const uint8_t CMD_RTC_TIME = 13;
 // Free commands
-// 14
+const uint8_t CMD_RELAY = 14;
 const uint8_t CMD_MOISTURE = 15;
 const uint8_t CMD_MOTION = 16;
 // Washing Machine
@@ -218,6 +228,7 @@ const uint8_t CMD_INFO = 100;
 const uint8_t RELAY_DISABLED = -1;
 const uint8_t RELAY_ON = 1;
 const uint8_t RELAY_OFF = 2;
+const uint8_t RELAY_CHANGE = 3;
 
 const uint8_t SERVO_DISABLED = -1;
 
