@@ -149,6 +149,8 @@ const uint8_t PORT_VALUE_9 = 68;
 const uint8_t PORT_TEMP_CTRL_2 = 71;
 const uint8_t PORT_TEMP_CTRL_3 = 72;
 const uint8_t PORT_TEMP_CTRL_4 = 73;
+const uint8_t PORT_TEMP_CTRL_GROUP_1 = 74;
+const uint8_t PORT_TEMP_CTRL_GROUP_2 = 75;
 
 // Commands
 const uint8_t CMD_TEMPERATURE = 1;
