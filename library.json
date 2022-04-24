@@ -1,6 +1,6 @@
 {
     "name": "ArduinoNet",
-    "version": "0.1.16",
+    "version": "0.1.17",
     "description": "Radio support to Arduino projects",
     "keywords": "radio, lora, rf24",
     "repository":

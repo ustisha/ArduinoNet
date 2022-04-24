@@ -81,7 +81,8 @@ const uint16_t GATEWAY = 00;
 const uint16_t BATHROOM = 01;
 const uint16_t BATHROOM_FLOOR = 011;
 const uint16_t BATHROOM_VALVE = 021;
-const uint16_t EXHAUSTER = 031;
+// 031 Not working!
+const uint16_t EXHAUSTER = 051;
 const uint16_t OUTSIDE_TEMP = 02;
 const uint16_t GREENHOUSE = 03;
 const uint16_t COLD_CHAMBER = 04;
