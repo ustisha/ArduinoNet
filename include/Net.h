@@ -193,6 +193,8 @@ const uint8_t CMD_SERVO_MIN_ANGLE = 32;
 const uint8_t CMD_SERVO_MAX_ANGLE = 33;
 const uint8_t CMD_SERVO_SPEED = 34;
 const uint8_t CMD_SERVO_MOVE_TYPE = 35;
+const uint8_t CMD_MAP_MIN = 36;
+const uint8_t CMD_MAP_MAX = 37;
 // Relays
 const uint8_t CMD_RELAY_00 = 40;
 const uint8_t CMD_RELAY_01 = 41;
