@@ -85,6 +85,7 @@ const uint16_t BATHROOM_FLOOR = 011;
 const uint16_t BATHROOM_VALVE = 021;
 // 031 Not working!
 const uint16_t COLD_CHAMBER = 041;
+const uint16_t TERRACE_DRAIN = 051;
 // 02
 const uint16_t OUTSIDE_TEMP = 02;
 // 03
