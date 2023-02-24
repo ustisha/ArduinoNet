@@ -78,15 +78,20 @@ struct Packet
 const uint16_t BROADCAST = 255;
 const uint16_t WWW = 254;
 const uint16_t GATEWAY = 00;
+// 01
 const uint16_t BATHROOM = 01;
 const uint16_t BATHROOM_FLOOR = 011;
+// @deprecated
 const uint16_t BATHROOM_VALVE = 021;
 // 031 Not working!
-const uint16_t EXHAUSTER = 051;
+const uint16_t COLD_CHAMBER = 041;
+// 02
 const uint16_t OUTSIDE_TEMP = 02;
+// 03
 const uint16_t GREENHOUSE = 03;
-const uint16_t COLD_CHAMBER = 04;
-const uint16_t MAIN_DISPLAY = 05;
+// 04
+const uint16_t GARAGE_GATES = 04;
+const uint16_t GARAGE = 014;
 
 // Component ports
 const uint8_t PORT_HTTP_HANDLER = 255;
