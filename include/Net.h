@@ -85,14 +85,13 @@ const uint16_t BATHROOM_FLOOR = 011;
 const uint16_t BATHROOM_VALVE = 021;
 // 031 Not working!
 const uint16_t COLD_CHAMBER = 041;
-const uint16_t TERRACE_DRAIN = 051;
 // 02
+// @todo Move to 014
 const uint16_t OUTSIDE_TEMP = 02;
 // 03
 const uint16_t GREENHOUSE = 03;
 // 04
-const uint16_t GARAGE_GATES = 04;
-const uint16_t GARAGE = 014;
+const uint16_t GARAGE = 04;
 
 // Component ports
 const uint8_t PORT_HTTP_HANDLER = 255;
