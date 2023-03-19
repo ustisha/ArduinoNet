@@ -13,7 +13,7 @@ public:
 
     using RF24Net::RF24Net;
 
-    void sendData(Packet *p) override;
+    bool sendData(Packet *p) override;
 
     using RF24Net::receiveData;
 };

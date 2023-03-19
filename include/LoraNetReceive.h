@@ -7,7 +7,7 @@
 class LoraNetReceive : public LoraNet {
 public:
 
-    void sendData(Packet *p) override;
+    bool sendData(Packet *p) override;
 };
 
 #endif //LORANETRECEIVE_H

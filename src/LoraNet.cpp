@@ -18,7 +18,7 @@ LoraNet::LoraNet(SmartNet *net, uint8_t ss, uint8_t reset, uint8_t dio0) : Radio
     IF_SERIAL_DEBUG(printf_P(PSTR("[LoraNet] Initialize status: %d\n"), status));
 }
 
-void LoraNet::sendData(Packet *p) {
+bool LoraNet::sendData(Packet *p) {
 
     unsigned long start;
     unsigned long m;
@@ -44,6 +44,7 @@ void LoraNet::sendData(Packet *p) {
     delay(10);
 
     IF_SERIAL_DEBUG(printf_P(PSTR("[LoraNet::sendData] Sent. Status: %d\n"), status));
+    return (bool) status;
 }
 
 void LoraNet::onReceiveFunc(void (*callback)(int)) {

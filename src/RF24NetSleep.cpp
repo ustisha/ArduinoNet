@@ -1,8 +1,9 @@
 #include "../include/RF24NetSleep.h"
 
-void RF24NetSleep::sendData(Packet *p) {
+bool RF24NetSleep::sendData(Packet *p) {
     radio.powerUp();
-    RF24Net::sendData(p);
+    bool status = RF24Net::sendData(p);
     radio.txStandBy();
     radio.powerDown();
+    return status;
 }

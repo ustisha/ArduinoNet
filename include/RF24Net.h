@@ -6,6 +6,7 @@
 #include <Arduino.h>
 #include <DebugLog.h>
 #include <RadioInterface.h>
+#include <RF24Network_config.h>
 #include <RF24Network.h>
 #include <RF24.h>
 #include <SmartNet.h>
@@ -20,6 +21,7 @@ class RF24Net : public RadioInterface {
 protected:
     RF24 &radio;
     RF24Network *network;
+    uint8_t maxRetry;
 
     void (*receiveCallback)(Packet *) = nullptr;
 
@@ -27,7 +29,7 @@ public:
 
     RF24Net(SmartNet *net, uint16_t node, RF24 &radio, uint8_t level = RF24_PA_LOW);
 
-    void sendData(Packet *p) override;
+    bool sendData(Packet *p) override;
 
     void receiveData(Packet *p) override;
 

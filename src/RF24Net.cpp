@@ -2,6 +2,7 @@
 
 RF24Net::RF24Net(SmartNet *net, uint16_t node, RF24 &radio, uint8_t level) : RadioInterface(net), radio(radio) {
 
+    maxRetry = 3;
     network = new RF24Network(radio);
 
     bool status = radio.begin();
@@ -21,16 +22,26 @@ RF24Net::RF24Net(SmartNet *net, uint16_t node, RF24 &radio, uint8_t level) : Rad
 #endif
 }
 
-void RF24Net::sendData(Packet *p) {
+bool RF24Net::sendData(Packet *p) {
     IF_SERIAL_DEBUG(
             printf_P(PSTR("[RF24Net::sendData] Sender: %u, Sport: %u, Receiver: %u, Rport: %u, Cmd: %u, Data: %ld\n"),
                      p->getSender(), p->getSenderPort(), p->getReceiver(), p->getReceiverPort(), p->getCommand(),
                      p->getData()));
 
     RF24NetworkHeader header(p->getReceiver());
-    bool status = network->write(header, &p->b, Packet::PACKET_SIZE);
+    bool status = false;
+    uint8_t currentRetry = 0;
+    uint8_t currentDelay = 2;
+    while (!status && currentRetry++ < maxRetry) {
+        status = network->write(header, &p->b, Packet::PACKET_SIZE);
+        if (!status) {
+            delay(currentDelay++);
+            network->update();
+        }
+    }
 
-    IF_SERIAL_DEBUG(printf_P(PSTR("[RF24Net::sendData] Sent. Status: %d\n"), (int) status));
+    IF_SERIAL_DEBUG(printf_P(PSTR("[RF24Net::sendData] Sent. Status: %d, tries: %u\n"), (int) status, currentRetry));
+    return status;
 }
 
 void RF24Net::receiveData(Packet *p) {
@@ -48,8 +59,12 @@ void RF24Net::receiveData(Packet *p) {
     if (nullptr != receiveCallback) {
         IF_SERIAL_DEBUG(PSTR("[RF24Net::receiveData] Receive Callback\n"));
         receiveCallback(p);
+        return;
     }
 
+    // @todo receiveData call sendData for confirmation but immediately write not working.
+    delay(2);
+    network->update();
     smartNet->commandReceived(p);
 }
 
@@ -58,10 +73,15 @@ void RF24Net::tick() {
 
     while (network->available()) {
         RF24NetworkHeader header;
-        Packet p{};
-        network->read(header, &p.b, Packet::PACKET_SIZE);
-        // @todo receiveData call sendData for confirmation but immediately write not working.
-        delay(10);
-        receiveData(&p);
+        uint16_t dataSize = network->peek(header);
+        if (header.type == 0 && dataSize == Packet::PACKET_SIZE) {
+            Packet p{};
+            network->read(header, &p.b, Packet::PACKET_SIZE);
+            receiveData(&p);
+        } else {
+            network->read(header, 0, 0);
+            IF_SERIAL_DEBUG(printf_P(PSTR("[RF24Net::tick] Received type: %u, size: %ud\n"), header.type, dataSize));
+        }
+        yield();
     }
 }

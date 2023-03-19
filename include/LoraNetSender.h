@@ -9,7 +9,7 @@ public:
 
     LoraNetSender(SmartNet *net, uint8_t ss, uint8_t reset, uint8_t dio0);
 
-    void sendData(Packet *p) override;
+    bool sendData(Packet *p) override;
 };
 
 #endif //LORANETSENDER_H

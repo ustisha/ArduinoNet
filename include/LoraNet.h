@@ -18,7 +18,7 @@ public:
     LoraNet(SmartNet *net, uint8_t ss = LORA_DEFAULT_SS_PIN, uint8_t reset = LORA_DEFAULT_RESET_PIN,
             uint8_t dio0 = LORA_DEFAULT_DIO0_PIN);
 
-    void sendData(Packet *p) override;
+    bool sendData(Packet *p) override;
 
     void onReceiveFunc(void(*callback)(int));
 
