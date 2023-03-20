@@ -62,9 +62,6 @@ void RF24Net::receiveData(Packet *p) {
         return;
     }
 
-    // @todo receiveData call sendData for confirmation but immediately write not working.
-    delay(2);
-    network->update();
     smartNet->commandReceived(p);
 }
 
@@ -78,10 +75,11 @@ void RF24Net::tick() {
             Packet p{};
             network->read(header, &p.b, Packet::PACKET_SIZE);
             receiveData(&p);
+            return;
         } else {
             network->read(header, 0, 0);
             IF_SERIAL_DEBUG(printf_P(PSTR("[RF24Net::tick] Received type: %u, size: %ud\n"), header.type, dataSize));
+            return;
         }
-        yield();
     }
 }
