@@ -86,6 +86,7 @@ const uint16_t BATHROOM_VALVE = 021;
 // 031 Not working!
 const uint16_t WARDROBE = 041;
 const uint16_t PORCH = 0141;
+const uint16_t BASEMENT = 0241;
 // 02
 // @todo Move to 014
 const uint16_t OUTSIDE_TEMP = 02;
