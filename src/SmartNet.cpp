@@ -1,5 +1,5 @@
 #include "../include/SmartNet.h"
-#include <../include/NetComponent.h>
+#include "../include/NetComponent.h"
 
 void SmartNet::addNetComponent(NetComponent *nc)
 {
@@ -15,14 +15,14 @@ void SmartNet::addNetComponent(NetComponent *nc)
 
 void SmartNet::commandReceived(Packet *p)
 {
-    for (int i = 0; i < maxCmp; i++) {
-        if (components[i].netComponent != nullptr) {
-            components[i].netComponent->receiveHandle(p);
+    for (int k = 0; k < maxCmp; k++) {
+        if (components[k].netComponent != nullptr) {
+            components[k].netComponent->receiveHandle(p);
         }
     }
 }
 
-void SmartNet::sendInfo(RadioInterface *n, long data, uint8_t cmd)
+void SmartNet::sendInfo(RadioInterface *n, long data, uint8_t cmd) const
 {
     Packet p{};
     p.setSender(sender);

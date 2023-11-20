@@ -1,14 +1,13 @@
 #include "../include/RF24Net.h"
 
-RF24Net::RF24Net(SmartNet *net, uint16_t node, RF24 &radio, uint8_t level) : RadioInterface(net), radio(radio) {
-
-    maxRetry = 3;
-    network = new RF24Network(radio);
-
+RF24Net::RF24Net(SmartNet *net, uint16_t node, class RF24 &radio, uint8_t level)
+        : RadioInterface(net), radio(radio), maxRetry(1)
+{
     bool status = radio.begin();
     radio.setPALevel(level);
     radio.setDataRate(RF24_250KBPS);
     radio.setCRCLength(RF24_CRC_8);
+    network = new RF24Network(radio);
     network->begin(RF24_CHANNEL, node);
 
 #ifdef SERIAL_DEBUG

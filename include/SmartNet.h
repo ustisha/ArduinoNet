@@ -26,7 +26,7 @@ public:
                                         components(new NetComponents[max]{}),
                                         maxCmp(max) {}
 
-    void sendInfo(RadioInterface *n, long data, uint8_t cmd = CMD_INFO);
+    void sendInfo(RadioInterface *n, long data, uint8_t cmd = CMD_INFO) const;
 
     void addNetComponent(NetComponent *nc);
 
